@@ -1,0 +1,33 @@
+{
+    "name": "payments/php_sdk",
+    "type": "library",
+    "version": "1.0.0",
+    "description": "PHP Implementation of the Payments API",
+    "license": "",
+    "extra": [
+        {
+            "engine": "Payments PHP SDK"
+        }
+    ],
+    "minimum-stability": "stable",
+    "support": {},
+    "authors": [
+	    {
+            "name": "peter",
+            "email": "peter.shang@nodus.com"
+        }
+	],
+    "require": {
+        "php": ">=5.6.0",
+        "ext-curl": "*",
+        "ext-hash": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.5.*"
+    },
+    "autoload": {
+        "classmap": [
+            "lib/"
+        ]
+    }
+}

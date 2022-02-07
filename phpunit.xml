@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="./vendor/autoload.php"  verbose="false">
+  <testsuites>
+    <testsuite name="ipgtestsuits">
+      <file>tests/VerifyTest.php</file>
+	  <file>tests/AuthTest.php</file>
+	  <file>tests/PurchaseTest.php</file>
+	  <file>tests/TokenizeTest.php</file>
+	  <file>tests/AvailablePaymentSolutionTest.php</file>
+	  <file>tests/VoidTest.php</file>
+	  <file>tests/CaptureTest.php</file>
+	  <file>tests/RefundTest.php</file>
+	  <file>tests/StatusCheckTest.php</file>
+    </testsuite>
+  </testsuites>
+</phpunit>
