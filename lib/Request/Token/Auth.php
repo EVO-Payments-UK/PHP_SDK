@@ -35,6 +35,7 @@ class RequestTokenAuth extends RequestToken {
         "brandId" => array("type" => "optional"),
         "userDevice" => array("type" => "optional"),
         "userAgent" => array("type" => "optional"),
+        "customerBrowser" => array("type" => "optional"),
         "taxAmount" => array("type" => "optional"),
         "shippingAmount" => array("type" => "optional"),
         "chargeAmount" => array("type" => "optional"),
