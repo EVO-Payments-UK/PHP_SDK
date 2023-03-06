@@ -13,6 +13,7 @@ class Configurable implements \ArrayAccess, \Iterator, \Serializable {
     const ACTION_VOID = "VOID";
     const ACTION_PURCHASE = "PURCHASE";
     const ACTION_REFUND = "REFUND";
+	const ACTION_GET_STATUS = "GET_STATUS";
     const ACTION_STATUS_CHECK = "STATUS_CHECK";
     const ACTION_AVAILABLE_PAYMENT_SOLUTION = "GET_AVAILABLE_PAYSOLS";
     const ACTION_VERIFY = "VERIFY";
@@ -43,6 +44,7 @@ class Configurable implements \ArrayAccess, \Iterator, \Serializable {
                 case "capture":
                 case "purchase":
                 case "refund":
+				case "getstatus":
                 case "statuscheck":
                 case "status_check":
                 case "void":

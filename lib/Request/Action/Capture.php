@@ -2,11 +2,11 @@
 
 namespace Payments;
 
-class RequestActionCapture extends RequestActionRefund {
-
-    public function __construct() {
-        parent::__construct();
-        $this->_data["action"] = Payments::ACTION_CAPTURE;
-    }
+class RequestActionCapture extends RequestAction {
+	
+	protected $_params = array(
+        "merchantId" => array("type" => "mandatory"),
+        "token" => array("type" => "mandatory"),
+    );
 
 }

@@ -11,9 +11,9 @@ class RequestActionTokenize extends RequestAction {
         "nameOnCard" => array("type" => "mandatory"),
         "expiryMonth" => array("type" => "mandatory"),
         "expiryYear" => array("type" => "mandatory"),
+		"cardDescription" => array("type" => "optional"),
         "startMonth" => array("type" => "optional"),
         "startYear" => array("type" => "optional"),
         "issueNumber" => array("type" => "optional"),
-        "cardDescription" => array("type" => "optional"),
     );
 }

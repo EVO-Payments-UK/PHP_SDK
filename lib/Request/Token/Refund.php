@@ -3,20 +3,18 @@
 namespace Payments;
 
 class RequestTokenRefund extends RequestToken {
-
-    protected $_params = array(
-        "merchantId" => array("type" => "mandatory"),
-        "originalMerchantTxId" => array("type" => "mandatory"),
-        "password" => array("type" => "mandatory"),
-        "action" => array(
-            "type" => "mandatory",
-            "values" => array(Payments::ACTION_REFUND, Payments::ACTION_CAPTURE),
-        ),
-        "timestamp" => array("type" => "mandatory"),
-        "allowOriginUrl" => array("type" => "mandatory"),
-        "amount" => array("type" => "mandatory"),
-        "originalTxId" => array("type" => "optional"),
-        "agentId" => array("type" => "optional"),
+	
+	protected $_params = array(
+		"merchantId" => array("type" => "mandatory"),
+		"password" => array("type" => "mandatory"),
+		"action" => array("type" => "mandatory"),
+		"timestamp" => array("type" => "mandatory"),
+		"allowOriginUrl" => array("type" => "mandatory"),
+		"originalTxId" => array("type" => "optional"),
+		"originalMerchantTxId" => array("type" => "mandatory"),
+		"agentId" => array("type" => "optional"),
+		"amount" => array("type" => "mandatory"),
+		"partialRefundComment" => array("type" => "optional"),
     );
 
     public function __construct() {

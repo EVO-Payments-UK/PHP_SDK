@@ -40,6 +40,9 @@ class Request extends Executable {
             case "refund":
                 return new RequestRefund($value);
                 break;
+			case "getstatus":
+                return new RequestGetStatus($value);
+                break;
             case "statuscheck":
             case "status_check":
                 return new RequestStatusCheck($value);
@@ -68,7 +71,7 @@ class Request extends Executable {
                 } else if ($value["type"] == "conditional") {
                     if (is_array($value["mandatory"])) {
                         foreach ($value["mandatory"] as $check => $value) {
-                            if ((isset($this->_data[$check])) and ( $this->_data[$check] == $value) and ( !isset($this->_data[$key]))) {
+								if (isset($this->_data[$check]) and (($this->_data[$check] == $value) or ($value == "isset")) and !isset($this->_data[$key])) {
                                 $ex = new PaymentsExceptionParamNotSet($key, NULL, isset($ex) ? $ex : NULL);
                             }
                         }
