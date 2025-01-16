@@ -1,7 +1,7 @@
 {
     "name": "payments/php_sdk",
     "type": "library",
-    "version": "1.0.0",
+  "version": "1.0.1",
     "description": "PHP Implementation of the Payments API",
     "license": "",
     "extra": [
